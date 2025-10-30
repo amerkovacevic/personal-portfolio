@@ -25,11 +25,11 @@ export const hero = {
 export const about = {
   title: "About",
   description:
-    "I’m a platform engineer with a hobby of web design. My experience spans building cloud-native platforms, designing data-rich dashboards, and championing modern engineering practices that help teams deliver faster without sacrificing quality.",
+    "I’m a Platform Engineer at Mastercard, based in the Greater St. Louis area, where I design and maintain scalable infrastructure that supports global financial systems. With a background in Computer Science from the University of Missouri – St. Louis, I focus on building reliable, high-performance platforms that balance innovation, security, and efficiency.",
   highlights: [
-    "Led cross-functional teams to ship large-scale platform migrations",
-    "Specialized in TypeScript, React, Node.js, and cloud infrastructure",
-    "Mentor and community organizer supporting early-career developers",
+    "Building and maintaining scalable systems that support secure, global financial infrastructure.",
+    "Experienced in TypeScript, React, Node.js, and cloud technologies, with a focus on performance and reliability.",
+    "Developing websites, apps, and digital tools that combine technical skill with creativity and experimentation.",
   ],
 };
 
@@ -56,45 +56,30 @@ export const projects = [
   {
     name: "AK Tools Dashboard",
     description:
-      "Seamless dashboard that connects all of my projects in one website.",
-    tags: ["React", "Javascript", "TailwindCSS"],
-    link: "https://amerkovacevic.com",
+      "A unified platform that brings all of my personal projects together in one place. Built for speed and simplicity, it centralizes tools, mini-apps, and utilities under a seamless dashboard experience.",
+    tags: ["Firebase", "TailwindCSS", "Emailjs", "React", "Vite"],
+    link: "https://dashboard.amerkovacevic.com",
   },
   {
-    name: "Voyager Commerce",
+    name: "Alen's General Construction",
     description:
-      "Composable commerce storefront leveraging headless CMS integrations, optimized for conversion with A/B testing and personalization.",
-    tags: ["Next.js", "Stripe", "Headless CMS"],
-    link: "https://example.com/voyager",
+      "A clean, modern website built to showcase a local construction company’s recent projects, story, and location. Focused on visual presentation and usability to help clients explore their work with ease.",
+    tags: ["Firebase", "TailwindCSS", "Emailjs", "React", "Vite"],
+    link: "https://alensgeneralconstruction.com",
   },
-  {
-    name: "PulseOps Platform",
-    description:
-      "Operational intelligence suite with alerting workflows, role-based access controls, and rich audit trails for compliance teams.",
-    tags: ["Node.js", "GraphQL", "AWS"],
-    link: "https://example.com/pulseops",
-  },
+  // {
+  //   name: "PulseOps Platform",
+  //   description:
+  //     "Operational intelligence suite with alerting workflows, role-based access controls, and rich audit trails for compliance teams.",
+  //   tags: ["Node.js", "GraphQL", "AWS"],
+  //   link: "https://example.com/pulseops",
+  // },
 ];
 
 export const skills = {
   core: ["JavaScript", "TypeScript", "React", "Node.js", "GraphQL", "Tailwind CSS", "AWS", "Docker"],
   tools: ["Vite", "Next.js", "Vercel", "Firebase", "Jest", "Cypress", "Figma"],
 };
-
-export const testimonials = [
-  {
-    quote:
-      "Amer brings a rare combination of technical excellence and empathy. Their leadership on our design system transformed how our teams collaborate.",
-    author: "Jamie Lee",
-    title: "Director of Product, TechNova Labs",
-  },
-  {
-    quote:
-      "From discovery to delivery, Amer keeps stakeholders aligned and ships consistently high quality work. A trusted partner on every project.",
-    author: "Priya Natarajan",
-    title: "Product Manager, CloudWave",
-  },
-];
 
 export const contact = {
   email: "amerkovacevic99@gmail.com",

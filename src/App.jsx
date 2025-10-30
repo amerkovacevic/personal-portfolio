@@ -8,7 +8,6 @@ import {
   hero,
   projects,
   skills,
-  testimonials,
 } from './data'
 
 const Section = ({ id, title, eyebrow, description, children }) => (
@@ -103,9 +102,6 @@ function App() {
             <a className="transition hover:text-sky-400" href="#skills">
               Skills
             </a>
-            <a className="transition hover:text-sky-400" href="#testimonials">
-              Testimonials
-            </a>
             <a className="transition hover:text-sky-400" href="#contact">
               Contact
             </a>
@@ -166,7 +162,7 @@ function App() {
             <aside className="w-full max-w-md space-y-6 rounded-3xl border border-slate-800 bg-slate-900/60 p-8 shadow-2xl shadow-sky-500/10">
               <h2 className="text-lg font-semibold text-slate-100">Let’s collaborate</h2>
               <p className="text-sm text-slate-300">
-                Based in {hero.location}. I partner with product teams and founders to build resilient, user-centered software.
+                Based in {hero.location}. I work with founders, startups, and teams to design and build thoughtful digital products. From idea to deployment, I focus on creating software that feels good to use and scales with growth.
               </p>
               <ul className="space-y-3 text-sm text-slate-300">
                 <li>
@@ -195,12 +191,10 @@ function App() {
           <div className="grid gap-12 lg:grid-cols-[1fr_1fr]">
             <div className="space-y-6 text-lg leading-8 text-slate-300">
               <p>
-                I believe the best products are created at the intersection of data, empathy, and craftsmanship. My approach
-                combines rapid experimentation with well-tested delivery pipelines so teams can iterate confidently.
+                Outside of engineering, I enjoy creating things. I build websites, apps, and digital tools for fun, often exploring ideas that make life easier or more engaging. From interactive mini-games to automation utilities and experimental web projects, I like bringing creative concepts to life through code.
               </p>
               <p>
-                Outside of day-to-day engineering, I enjoy mentoring developers, contributing to open-source, and sharing
-                lessons learned at community events.
+                Whether it’s solving complex backend problems or building something from scratch, I’m motivated by curiosity, craftsmanship, and a constant desire to learn and improve.
               </p>
             </div>
             <div className="space-y-4">
@@ -304,28 +298,6 @@ function App() {
                 ))}
               </div>
             </div>
-          </div>
-        </Section>
-
-        <Section
-          id="testimonials"
-          eyebrow="Kind words"
-          title="Testimonials"
-          description="Feedback from collaborators who have trusted me with their most important initiatives."
-        >
-          <div className="grid gap-6 md:grid-cols-2">
-            {testimonials.map((testimonial) => (
-              <figure
-                key={testimonial.quote}
-                className="flex h-full flex-col justify-between rounded-3xl border border-slate-800 bg-slate-900/40 p-8 shadow-lg shadow-slate-950/40"
-              >
-                <blockquote className="text-sm leading-6 text-slate-300">“{testimonial.quote}”</blockquote>
-                <figcaption className="mt-6">
-                  <p className="text-sm font-semibold text-slate-100">{testimonial.author}</p>
-                  <p className="text-xs text-slate-400">{testimonial.title}</p>
-                </figcaption>
-              </figure>
-            ))}
           </div>
         </Section>
 
