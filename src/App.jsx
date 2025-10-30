@@ -1,3 +1,6 @@
+import { useRef, useState } from 'react'
+import emailjs from '@emailjs/browser'
+
 import {
   about,
   contact,
@@ -39,6 +42,47 @@ const Pill = ({ children }) => (
 )
 
 function App() {
+  const formRef = useRef(null)
+  const [status, setStatus] = useState('idle')
+  const [feedbackMessage, setFeedbackMessage] = useState('')
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+
+    if (status === 'submitting') {
+      return
+    }
+
+    setStatus('submitting')
+    setFeedbackMessage('')
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+
+    if (!serviceId || !templateId || !publicKey) {
+      setStatus('error')
+      setFeedbackMessage(
+        'Message delivery is temporarily unavailable. Please reach out using the direct contact details below.'
+      )
+      return
+    }
+
+    try {
+      await emailjs.sendForm(serviceId, templateId, formRef.current, publicKey)
+
+      formRef.current?.reset()
+      setStatus('success')
+      setFeedbackMessage("Thanks for reaching out! I'll get back to you shortly.")
+    } catch (error) {
+      console.error('EmailJS error', error)
+      setStatus('error')
+      setFeedbackMessage(
+        'Something went wrong while sending your message. Please try again or reach out using the direct contact details below.'
+      )
+    }
+  }
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <header className="sticky top-0 z-50 border-b border-slate-800/80 bg-slate-950/70 backdrop-blur">
@@ -293,10 +337,9 @@ function App() {
         >
           <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
             <form
+              ref={formRef}
+              onSubmit={handleSubmit}
               className="space-y-6 rounded-3xl border border-slate-800 bg-slate-900/40 p-8 shadow-xl shadow-sky-500/10"
-              action={`mailto:${contact.email}`}
-              method="post"
-              encType="text/plain"
             >
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-slate-200">
@@ -304,7 +347,7 @@ function App() {
                 </label>
                 <input
                   id="name"
-                  name="name"
+                  name="from_name"
                   type="text"
                   required
                   className="mt-2 w-full rounded-xl border border-slate-700 bg-slate-950/60 px-4 py-3 text-sm text-slate-100 shadow-inner shadow-slate-950 focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-500/40"
@@ -316,7 +359,7 @@ function App() {
                 </label>
                 <input
                   id="email"
-                  name="email"
+                  name="reply_to"
                   type="email"
                   required
                   className="mt-2 w-full rounded-xl border border-slate-700 bg-slate-950/60 px-4 py-3 text-sm text-slate-100 shadow-inner shadow-slate-950 focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-500/40"
@@ -334,44 +377,52 @@ function App() {
                   className="mt-2 w-full rounded-xl border border-slate-700 bg-slate-950/60 px-4 py-3 text-sm text-slate-100 shadow-inner shadow-slate-950 focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-500/40"
                 />
               </div>
+              {feedbackMessage && (
+                <p className="text-sm text-slate-300" role="status" aria-live="polite">
+                  {feedbackMessage}
+                </p>
+              )}
               <button
                 type="submit"
-                className="inline-flex w-full items-center justify-center rounded-full bg-sky-500 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-sky-400"
+                disabled={status === 'submitting'}
+                className="inline-flex w-full items-center justify-center rounded-full bg-sky-500 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-sky-400 disabled:cursor-not-allowed disabled:opacity-60"
               >
-                Send message
+                {status === 'submitting' ? 'Sending...' : 'Send message'}
               </button>
             </form>
-            <div className="space-y-6 text-sm text-slate-300">
-              <div className="rounded-3xl border border-slate-800 bg-slate-900/40 p-6">
-                <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-400">Direct contact</h3>
-                <ul className="mt-4 space-y-3">
-                  <li>
-                    <span className="font-semibold text-slate-100">Email:</span>{' '}
-                    <a className="text-sky-400 hover:text-sky-300" href={`mailto:${contact.email}`}>
-                      {contact.email}
-                    </a>
-                  </li>
-                  <li>
-                    <span className="font-semibold text-slate-100">Phone:</span>{' '}
-                    <a className="text-sky-400 hover:text-sky-300" href={`tel:${contact.phone}`}>
-                      {contact.phone}
-                    </a>
-                  </li>
-                  <li>
-                    <span className="font-semibold text-slate-100">LinkedIn:</span>{' '}
-                    <a className="text-sky-400 hover:text-sky-300" href={contact.linkedin} target="_blank" rel="noreferrer">
-                      {contact.linkedin.replace('https://www.', '')}
-                    </a>
-                  </li>
-                  <li>
-                    <span className="font-semibold text-slate-100">GitHub:</span>{' '}
-                    <a className="text-sky-400 hover:text-sky-300" href={contact.github} target="_blank" rel="noreferrer">
-                      {contact.github.replace('https://', '')}
-                    </a>
-                  </li>
-                </ul>
+            {status === 'error' && (
+              <div className="space-y-6 text-sm text-slate-300">
+                <div className="rounded-3xl border border-slate-800 bg-slate-900/40 p-6">
+                  <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-400">Direct contact</h3>
+                  <ul className="mt-4 space-y-3">
+                    <li>
+                      <span className="font-semibold text-slate-100">Email:</span>{' '}
+                      <a className="text-sky-400 hover:text-sky-300" href={`mailto:${contact.email}`}>
+                        {contact.email}
+                      </a>
+                    </li>
+                    <li>
+                      <span className="font-semibold text-slate-100">Phone:</span>{' '}
+                      <a className="text-sky-400 hover:text-sky-300" href={`tel:${contact.phone}`}>
+                        {contact.phone}
+                      </a>
+                    </li>
+                    <li>
+                      <span className="font-semibold text-slate-100">LinkedIn:</span>{' '}
+                      <a className="text-sky-400 hover:text-sky-300" href={contact.linkedin} target="_blank" rel="noreferrer">
+                        {contact.linkedin.replace('https://www.', '')}
+                      </a>
+                    </li>
+                    <li>
+                      <span className="font-semibold text-slate-100">GitHub:</span>{' '}
+                      <a className="text-sky-400 hover:text-sky-300" href={contact.github} target="_blank" rel="noreferrer">
+                        {contact.github.replace('https://', '')}
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </Section>
       </main>
