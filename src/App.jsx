@@ -371,30 +371,6 @@ function App() {
                   </li>
                 </ul>
               </div>
-              <div className="rounded-3xl border border-slate-800 bg-slate-900/40 p-6">
-                <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-400">Newsletter</h3>
-                <p className="mt-3 text-sm text-slate-300">
-                  Get quarterly updates featuring case studies, engineering learnings, and resources for high-performing teams.
-                </p>
-                <form className="mt-4 flex flex-col gap-3 sm:flex-row" onSubmit={(event) => event.preventDefault()}>
-                  <label htmlFor="newsletter-email" className="sr-only">
-                    Email address
-                  </label>
-                  <input
-                    id="newsletter-email"
-                    type="email"
-                    required
-                    placeholder="you@example.com"
-                    className="flex-1 rounded-full border border-slate-700 bg-slate-950/60 px-4 py-3 text-sm text-slate-100 focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-500/40"
-                  />
-                  <button
-                    type="submit"
-                    className="inline-flex items-center justify-center rounded-full bg-slate-200 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-slate-100"
-                  >
-                    Join list
-                  </button>
-                </form>
-              </div>
             </div>
           </div>
         </Section>
@@ -411,7 +387,7 @@ function App() {
               GitHub
             </a>
             <a className="transition hover:text-sky-400" href={hero.cta.primary.href} target="_blank" rel="noreferrer">
-              Résumé
+              Resume
             </a>
           </div>
         </div>

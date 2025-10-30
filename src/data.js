@@ -97,8 +97,8 @@ export const testimonials = [
 ];
 
 export const contact = {
-  email: "amer.kovacevic@example.com",
-  phone: "+1 (555) 123-4567",
-  linkedin: "https://www.linkedin.com/in/amer-kovacevic/",
-  github: "https://github.com/amershub",
+  email: "amerkovacevic99@gmail.com",
+  phone: "+1 (314) 443-6491",
+  linkedin: "https://www.linkedin.com/in/amerkovacevic/",
+  github: "https://github.com/amerkovacevic",
 };
