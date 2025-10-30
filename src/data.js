@@ -7,16 +7,16 @@ export const hero = {
   availability: "Open to freelance & remote opportunities",
   cta: {
     primary: {
-      label: "Download Résumé",
+      label: "Download Resume",
       href: "https://drive.google.com",
     },
     secondary: {
       label: "View LinkedIn",
-      href: "https://www.linkedin.com/in/amer-kovacevic/",
+      href: "https://www.linkedin.com/in/amerkovacevic/",
     },
   },
   stats: [
-    { label: "Years of experience", value: "7+" },
+    { label: "Years of experience", value: "2+" },
     { label: "Projects delivered", value: "30+" },
     { label: "Happy collaborators", value: "20+" },
   ],
@@ -25,7 +25,7 @@ export const hero = {
 export const about = {
   title: "About",
   description:
-    "I’m a software engineer focused on translating complex business requirements into accessible, elegant products. My experience spans building cloud-native platforms, designing data-rich dashboards, and championing modern engineering practices that help teams deliver faster without sacrificing quality.",
+    "I’m a platform engineer with a hobby of web design. My experience spans building cloud-native platforms, designing data-rich dashboards, and championing modern engineering practices that help teams deliver faster without sacrificing quality.",
   highlights: [
     "Led cross-functional teams to ship large-scale platform migrations",
     "Specialized in TypeScript, React, Node.js, and cloud infrastructure",
@@ -35,38 +35,30 @@ export const about = {
 
 export const experience = [
   {
-    company: "TechNova Labs",
-    title: "Senior Software Engineer",
-    timeframe: "2022 — Present",
+    company: "Mastercard",
+    title: "Platform Engineer II",
+    timeframe: "2023 — Present",
     description:
-      "Guided the transition to a micro-frontend architecture using React and Vite, improving deployment agility and reducing bundle size by 35%. Built data visualization tooling for internal analytics teams and championed automated accessibility testing across the org.",
-    skills: ["React", "TypeScript", "GraphQL", "AWS"],
+      "Supporting and maintaining operating systems, such as Oracle Linux along with VMware to service customers that need assistance.",
+    skills: ["Linux", "CI/CD Pipelines", "SELinux", "Bash Scripting", "Git", "VMware", "Nginx", "Splunk"],
   },
   {
-    company: "CloudWave",
-    title: "Full-Stack Engineer",
-    timeframe: "2019 — 2022",
+    company: "SpearTip Cybersecurity",
+    title: "Software Developer",
+    timeframe: "2021 — 2022",
     description:
-      "Developed customer-facing onboarding experiences, integrating payment workflows and real-time notifications. Collaborated with product managers to define roadmap priorities and introduced performance budgets that improved Core Web Vitals scores.",
-    skills: ["Next.js", "Node.js", "PostgreSQL", "Kubernetes"],
-  },
-  {
-    company: "Brightline Studio",
-    title: "Software Engineer",
-    timeframe: "2016 — 2019",
-    description:
-      "Shipped digital experiences for startups and non-profits, including marketing sites, fundraising platforms, and interactive dashboards. Established component libraries and documentation that accelerated delivery cycles by 25%.",
-    skills: ["React", "Express", "MongoDB", "Design Systems"],
+      "Working with a team to create, manage, and maintain infrastructure and tools for SpearTip, as well as assisting other teams with issues pertaining to our suite of software.",
+    skills: ["ELK Stack", "AWS EC2 and S3", "Python", "JavaScript", "CSS", "HTML", "Git", "Docker"],
   },
 ];
 
 export const projects = [
   {
-    name: "InsightIQ Analytics",
+    name: "AK Tools Dashboard",
     description:
-      "End-to-end analytics platform featuring automated data ingestion, real-time dashboards, and scheduled reporting for executive stakeholders.",
-    tags: ["React", "D3.js", "TailwindCSS"],
-    link: "https://example.com/insightiq",
+      "Seamless dashboard that connects all of my projects in one website.",
+    tags: ["React", "Javascript", "TailwindCSS"],
+    link: "https://amerkovacevic.com",
   },
   {
     name: "Voyager Commerce",
