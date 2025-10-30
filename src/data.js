@@ -7,8 +7,8 @@ export const hero = {
   availability: "Open to freelance & remote opportunities",
   cta: {
     primary: {
-      label: "Download Resume",
-      href: "https://drive.google.com",
+      label: "Cool Apps",
+      href: "https://dashboard.amerkovacevic.com",
     },
     secondary: {
       label: "View LinkedIn",
