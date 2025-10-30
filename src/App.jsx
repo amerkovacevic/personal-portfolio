@@ -172,14 +172,11 @@ function App() {
                   <span className="font-semibold text-slate-100">Availability:</span> {hero.availability}
                 </li>
                 <li>
-                  <span className="font-semibold text-slate-100">LinkedIn:</span>{' '}
                   <a
-                    className="text-sky-400 underline-offset-4 hover:underline"
-                    href={hero.cta.secondary.href}
-                    target="_blank"
-                    rel="noreferrer"
+                    className="inline-flex w-full items-center justify-center rounded-full border border-sky-400 px-4 py-2 text-sm font-semibold text-sky-400 transition hover:bg-sky-400 hover:text-slate-900"
+                    href="#contact"
                   >
-                    {hero.cta.secondary.href.replace('https://www.', '')}
+                    Contact Me
                   </a>
                 </li>
               </ul>
