@@ -1,3 +1,3 @@
-Modern single-page portfolio built with React, Vite, and Tailwind CSS. The design emphasizes accessibility, responsive layouts, and a streamlined content structure that is ready to deploy to Firebase Hosting.
+# Amer Kovacevic – Portfolio
 
-Distributed under the MIT License.
+Personal portfolio website. Found at https://amerkovacevic.com
