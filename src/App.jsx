@@ -122,9 +122,6 @@ function App() {
           <div className="absolute inset-x-0 top-[-20%] -z-10 h-[500px] bg-gradient-to-br from-sky-500/40 via-transparent to-purple-500/30 blur-3xl" />
           <div className="mx-auto flex max-w-6xl flex-col gap-16 px-6 pb-32 pt-24 lg:flex-row lg:items-center lg:px-8">
             <div className="max-w-3xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.4em] text-sky-400">
-                {hero.availability}
-              </p>
               <h1 className="mt-6 text-4xl font-bold tracking-tight text-slate-50 sm:text-5xl lg:text-6xl">
                 {hero.name}
               </h1>
@@ -288,9 +285,33 @@ function App() {
               </div>
             </div>
             <div>
-              <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-400">Tools & platforms</h3>
+              <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-400">Tools & Platforms</h3>
               <div className="mt-4 flex flex-wrap gap-3">
                 {skills.tools.map((item) => (
+                  <Pill key={item}>{item}</Pill>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-400">Cloud & Infrastructure</h3>
+              <div className="mt-4 flex flex-wrap gap-3">
+                {skills.cloud.map((item) => (
+                  <Pill key={item}>{item}</Pill>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-400">Development & Workflow</h3>
+              <div className="mt-4 flex flex-wrap gap-3">
+                {skills.development.map((item) => (
+                  <Pill key={item}>{item}</Pill>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-400">Currently Exploring</h3>
+              <div className="mt-4 flex flex-wrap gap-3">
+                {skills.exploring.map((item) => (
                   <Pill key={item}>{item}</Pill>
                 ))}
               </div>
@@ -405,9 +426,6 @@ function App() {
             </a>
             <a className="transition hover:text-sky-400" href={contact.github} target="_blank" rel="noreferrer">
               GitHub
-            </a>
-            <a className="transition hover:text-sky-400" href={hero.cta.primary.href} target="_blank" rel="noreferrer">
-              Resume
             </a>
           </div>
         </div>

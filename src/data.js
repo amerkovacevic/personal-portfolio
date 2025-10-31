@@ -2,7 +2,7 @@ export const hero = {
   name: "Amer Kovacevic",
   tagline: "Building thoughtful digital experiences",
   description:
-    "Full-stack engineer with a passion for crafting performant web applications, intuitive user interfaces, and inclusive developer tooling.",
+    "I build things for the web. Apps, tools, and ideas that start as sketches and end up as something people actually enjoy using. I focus on clean design, smooth performance, and having fun while I’m at it.",
   location: "United States",
   availability: "Open to freelance & remote opportunities",
   cta: {
@@ -16,9 +16,9 @@ export const hero = {
     },
   },
   stats: [
-    { label: "Years of experience", value: "2+" },
-    { label: "Projects delivered", value: "30+" },
-    { label: "Happy collaborators", value: "20+" },
+    { label: "Years of experience", value: "4+" },
+    { label: "Projects Created", value: "10+" },
+    // { label: "Happy collaborators", value: "20+" },
   ],
 };
 
@@ -39,7 +39,7 @@ export const experience = [
     title: "Platform Engineer II",
     timeframe: "2023 — Present",
     description:
-      "Supporting and maintaining operating systems, such as Oracle Linux along with VMware to service customers that need assistance.",
+      "Contributing to the reliability and scalability of Mastercard’s global infrastructure. Focused on maintaining secure Linux environments, automating workflows, and optimizing systems across enterprise-level platforms.",
     skills: ["Linux", "CI/CD Pipelines", "SELinux", "Bash Scripting", "Git", "VMware", "Nginx", "Splunk"],
   },
   {
@@ -47,7 +47,7 @@ export const experience = [
     title: "Software Developer",
     timeframe: "2021 — 2022",
     description:
-      "Working with a team to create, manage, and maintain infrastructure and tools for SpearTip, as well as assisting other teams with issues pertaining to our suite of software.",
+      "Developed and maintained tools and backend systems that supported threat intelligence and internal operations. Collaborated with cross-functional teams to improve software stability, automation, and performance.",
     skills: ["ELK Stack", "AWS EC2 and S3", "Python", "JavaScript", "CSS", "HTML", "Git", "Docker"],
   },
 ];
@@ -77,8 +77,11 @@ export const projects = [
 ];
 
 export const skills = {
-  core: ["JavaScript", "TypeScript", "React", "Node.js", "GraphQL", "Tailwind CSS", "AWS", "Docker"],
-  tools: ["Vite", "Next.js", "Vercel", "Firebase", "Jest", "Cypress", "Figma"],
+  core: ["JavaScript", "TypeScript", "React", "Node.js", "Tailwind CSS", "AWS", "Docker", "Python", "Bash"],
+  tools: ["Vite", "Next.js", "Vercel", "Firebase", "CI/CD Pipelines", "GitHub Actions", "Jest", "Cypress", "Postman", "Figma"],
+  cloud: ["AWS EC2", "AWS S3", "Firebase Hosting", "VMware", "Nginx", "Linux (Oracle / Ubuntu)", "Splunk", "Docker", "Git"],
+  development: ["VS Code", "Vercel CLI", "pnpm", "npm", "ESLint", "Prettier", "Framer Motion", "EmailJS", "Notion", "Trello"],
+  exploring: ["tRPC", "Prisma", "Cloudflare Workers", "Supabase", "Zustand", "Three.js", "Codex"],
 };
 
 export const contact = {
