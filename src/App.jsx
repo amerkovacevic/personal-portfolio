@@ -107,7 +107,7 @@ function App() {
             </a>
           </div>
           <a
-            className="hidden rounded-full bg-tertiary-500 px-4 py-2 text-sm font-semibold text-primary-800 transition hover:bg-tertiary-600 active:bg-tertiary-600 md:inline-flex touch-manipulation"
+            className="hidden rounded-full bg-tertiary-500 px-4 py-2 text-sm font-semibold text-accent-50 transition hover:bg-tertiary-600 active:bg-tertiary-600 md:inline-flex touch-manipulation"
             href={hero.cta.secondary.href}
             target="_blank"
             rel="noreferrer"
@@ -129,7 +129,7 @@ function App() {
               <p className="mt-6 text-lg leading-8 text-quaternary-300">{hero.description}</p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
-                  className="inline-flex items-center justify-center rounded-full bg-tertiary-500 px-6 py-3 text-sm font-semibold text-primary-800 shadow-lg shadow-tertiary-500/20 transition hover:-translate-y-0.5 hover:bg-tertiary-400 active:bg-tertiary-400 touch-manipulation"
+                  className="inline-flex items-center justify-center rounded-full bg-tertiary-500 px-6 py-3 text-sm font-semibold text-accent-50 shadow-lg shadow-tertiary-500/20 transition hover:-translate-y-0.5 hover:bg-tertiary-400 active:bg-tertiary-400 touch-manipulation"
                   href={hero.cta.primary.href}
                   target="_blank"
                   rel="noreferrer"
@@ -375,7 +375,7 @@ function App() {
               <button
                 type="submit"
                 disabled={status === 'submitting'}
-                className="inline-flex w-full items-center justify-center rounded-full bg-tertiary-500 px-6 py-3 text-sm font-semibold text-primary-800 transition hover:-translate-y-0.5 hover:bg-tertiary-400 active:bg-tertiary-400 disabled:cursor-not-allowed disabled:opacity-60 touch-manipulation"
+                className="inline-flex w-full items-center justify-center rounded-full bg-tertiary-500 px-6 py-3 text-sm font-semibold text-accent-50 transition hover:-translate-y-0.5 hover:bg-tertiary-400 active:bg-tertiary-400 disabled:cursor-not-allowed disabled:opacity-60 touch-manipulation"
               >
                 {status === 'submitting' ? 'Sending...' : 'Send message'}
               </button>
