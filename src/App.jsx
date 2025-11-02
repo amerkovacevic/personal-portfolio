@@ -417,18 +417,8 @@ function App() {
         </Section>
       </main>
 
-      <footer className="border-t border-tertiary-500/30 bg-primary-800">
-        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-10 text-sm text-quaternary-500 sm:flex-row sm:items-center sm:justify-between">
-          <p>&copy; {new Date().getFullYear()} {hero.name}. All rights reserved.</p>
-          <div className="flex flex-wrap gap-4">
-            <a className="transition hover:text-tertiary-400" href={contact.linkedin} target="_blank" rel="noreferrer">
-              LinkedIn
-            </a>
-            <a className="transition hover:text-tertiary-400" href={contact.github} target="_blank" rel="noreferrer">
-              GitHub
-            </a>
-          </div>
-        </div>
+      <footer className="border-t border-tertiary-500/30 bg-primary-800/80 py-4 text-center text-xs text-quaternary-500">
+        <p>&copy; {new Date().getFullYear()} Amer Kovacevic All rights reserved.</p>
       </footer>
     </div>
   )
