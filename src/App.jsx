@@ -147,7 +147,7 @@ function App() {
               </div>
               <dl className="mt-12 grid grid-cols-1 gap-6 text-sm text-quaternary-300 sm:grid-cols-3">
                 {hero.stats.map((stat) => (
-                  <div key={stat.label} className="rounded-3xl border border-tertiary-500/30 bg-secondary-700/60 p-6">
+                  <div key={stat.label} className="rounded-3xl border border-tertiary-500/30 bg-secondary-700/70 p-6">
                     <dt className="text-xs font-semibold uppercase tracking-[0.25em] text-quaternary-400">
                       {stat.label}
                     </dt>
@@ -156,7 +156,7 @@ function App() {
                 ))}
               </dl>
             </div>
-            <aside className="w-full max-w-md space-y-6 rounded-3xl border border-tertiary-500/30 bg-secondary-700/60 p-8 shadow-2xl shadow-tertiary-500/10">
+            <aside className="w-full max-w-md space-y-6 rounded-3xl border border-tertiary-500/30 bg-secondary-700/70 p-8 shadow-2xl shadow-tertiary-500/20">
               <h2 className="text-lg font-semibold text-accent-50">Let's collaborate</h2>
               <p className="text-sm text-quaternary-300">
                 Based in {hero.location}. I work with founders, startups, and teams to design and build thoughtful digital products. From idea to deployment, I focus on creating software that feels good to use and scales with growth.
@@ -195,7 +195,7 @@ function App() {
               <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-tertiary-400">Highlights</h3>
               <ul className="space-y-3 text-sm text-quaternary-300">
                 {about.highlights.map((item) => (
-                  <li key={item} className="flex gap-3 rounded-2xl border border-tertiary-500/30 bg-secondary-700/40 p-4">
+                  <li key={item} className="flex gap-3 rounded-2xl border border-tertiary-500/30 bg-secondary-700/70 p-4">
                     <span className="mt-1 text-tertiary-400">▹</span>
                     <span>{item}</span>
                   </li>
@@ -285,7 +285,7 @@ function App() {
               </div>
             </div>
             <div>
-              <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-400">Tools & Platforms</h3>
+              <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-tertiary-400">Tools & Platforms</h3>
               <div className="mt-4 flex flex-wrap gap-3">
                 {skills.tools.map((item) => (
                   <Pill key={item}>{item}</Pill>
@@ -293,7 +293,7 @@ function App() {
               </div>
             </div>
             <div>
-              <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-400">Cloud & Infrastructure</h3>
+              <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-tertiary-400">Cloud & Infrastructure</h3>
               <div className="mt-4 flex flex-wrap gap-3">
                 {skills.cloud.map((item) => (
                   <Pill key={item}>{item}</Pill>
@@ -301,7 +301,7 @@ function App() {
               </div>
             </div>
             <div>
-              <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-400">Development & Workflow</h3>
+              <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-tertiary-400">Development & Workflow</h3>
               <div className="mt-4 flex flex-wrap gap-3">
                 {skills.development.map((item) => (
                   <Pill key={item}>{item}</Pill>
@@ -309,7 +309,7 @@ function App() {
               </div>
             </div>
             <div>
-              <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-400">Currently Exploring</h3>
+              <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-tertiary-400">Currently Exploring</h3>
               <div className="mt-4 flex flex-wrap gap-3">
                 {skills.exploring.map((item) => (
                   <Pill key={item}>{item}</Pill>
