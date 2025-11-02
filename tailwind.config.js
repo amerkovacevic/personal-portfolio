@@ -1,3 +1,5 @@
+import { tailwindColors } from '../shared-design-tokens.js';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -5,7 +7,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: tailwindColors,
+    },
   },
   plugins: [],
 };
