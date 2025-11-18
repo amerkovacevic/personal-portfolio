@@ -1,3 +1,3 @@
-# Amer Kovacevic – Portfolio
+# Personal Portfolio
 
-Personal portfolio website. Found at https://amerkovacevic.com
+A modern, attractive Next.js personal portfolio website with smooth animations and a professional design.
