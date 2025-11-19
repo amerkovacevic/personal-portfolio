@@ -30,19 +30,20 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/10 to-black" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center overflow-visible">
         <motion.div
+          className="overflow-visible"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <motion.h1
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 overflow-visible"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            <span className="block">I'm a</span>
+            <span className="block mb-2">I'm a</span>
             <span className="block gradient-text">Platform Engineer</span>
           </motion.h1>
 

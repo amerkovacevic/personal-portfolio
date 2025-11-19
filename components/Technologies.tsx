@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import Image from 'next/image';
 
 const dailyCoreStack = [
   { name: 'Linux', image: '/assets/linux.png', color: 'from-yellow-500 to-orange-500' },
@@ -109,12 +108,12 @@ export default function Technologies() {
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
                   >
-                    <Image
+                    <img
                       src={tech.image}
                       alt={tech.name}
                       width={48}
                       height={48}
-                      className="object-contain"
+                      className="object-contain w-full h-full"
                     />
                   </motion.div>
                   <h3 className="text-sm font-semibold text-white">{tech.name}</h3>
@@ -162,12 +161,12 @@ export default function Technologies() {
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
                   >
-                    <Image
+                    <img
                       src={tech.image}
                       alt={tech.name}
                       width={48}
                       height={48}
-                      className="object-contain"
+                      className="object-contain w-full h-full"
                     />
                   </motion.div>
                   <h3 className="text-sm font-semibold text-white">{tech.name}</h3>
