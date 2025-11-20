@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ExternalLink, Github } from 'lucide-react';
+import Image from 'next/image';
 
 const projects = [
   {
@@ -10,6 +11,7 @@ const projects = [
     description: 'An iOS social media platform for movie lovers. Rate, review and share movies with your friends and followers. Discover new films, create watchlists, and engage with a community of cinephiles. Built with React Native and Expo for a native iOS experience.',
     tech: ['React-Native', 'NativeWind', 'Expo', 'Firebase'],
     image: 'bg-gradient-to-br from-blue-500 to-purple-600',
+    logo: '/assets/1024.png',
     github: null,
     live: 'https://flickfeed.app',
   },
@@ -18,6 +20,7 @@ const projects = [
     description: 'A comprehensive dashboard containing tools and projects I\'ve made. A centralized hub showcasing various applications and utilities built for different purposes.',
     tech: ['React', 'TailwindCSS', 'TypeScript', 'JavaScript', 'Next.js', 'Firebase'],
     image: 'bg-gradient-to-br from-green-500 to-teal-600',
+    logo: '/assets/aklogo.png',
     github: 'https://github.com/amerkovacevic?tab=repositories',
     live: 'https://dashboard.amerkovacevic.com',
   },
@@ -88,7 +91,7 @@ export default function Projects() {
                 whileHover={{ y: -10 }}
                 transition={{ type: 'spring', stiffness: 300 }}
               >
-                {/* Project Image/Placeholder */}
+                {/* Project Image/Logo */}
                 <div className={`${project.image} h-48 relative overflow-hidden`}>
                   <motion.div
                     className="absolute inset-0 bg-black/20"
@@ -96,9 +99,25 @@ export default function Projects() {
                     transition={{ duration: 0.3 }}
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-white text-4xl font-bold opacity-50">
-                      {project.title.charAt(0)}
-                    </span>
+                    {project.logo ? (
+                      <motion.div
+                        className="relative w-32 h-32"
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <Image
+                          src={project.logo}
+                          alt={`${project.title} logo`}
+                          fill
+                          className="object-contain"
+                          sizes="128px"
+                        />
+                      </motion.div>
+                    ) : (
+                      <span className="text-white text-4xl font-bold opacity-50">
+                        {project.title.charAt(0)}
+                      </span>
+                    )}
                   </div>
                 </div>
 
