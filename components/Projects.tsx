@@ -10,7 +10,7 @@ const projects = [
     title: 'FlickFeed',
     description: 'An iOS social media platform for movie lovers. Rate, review and share movies with your friends and followers. Discover new films, create watchlists, and engage with a community of cinephiles. Built with React Native and Expo for a native iOS experience.',
     tech: ['React-Native', 'NativeWind', 'Expo', 'Firebase'],
-    image: 'bg-gradient-to-br from-blue-500 to-purple-600',
+    image: 'bg-gradient-to-br from-yellow-500 to-orange-600',
     logo: '/assets/1024.png',
     github: null,
     live: 'https://flickfeed.app',
@@ -57,7 +57,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-32 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-orange-900/5 to-transparent" />
       
       <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -123,10 +123,10 @@ export default function Projects() {
 
                 {/* Project Content */}
                 <div className="p-6 flex-1 flex flex-col">
-                  <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-gray-400 mb-4 flex-1">
+                  <p className="text-gray-400 mb-4 flex-1 text-sm sm:text-base">
                     {project.description}
                   </p>
 
@@ -135,7 +135,7 @@ export default function Projects() {
                     {project.tech.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm"
+                        className="px-2 sm:px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs sm:text-sm"
                       >
                         {tech}
                       </span>

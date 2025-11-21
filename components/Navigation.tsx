@@ -20,7 +20,7 @@ export default function Navigation() {
     { name: 'Home', href: '#home' },
     { name: 'Technologies', href: '#technologies' },
     { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Experience', href: '#experience' },
   ];
 
   return (
@@ -66,8 +66,9 @@ export default function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-white p-2 -mr-2 touch-manipulation"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -88,7 +89,7 @@ export default function Navigation() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block text-gray-300 hover:text-white transition-colors"
+                  className="block text-gray-300 hover:text-white transition-colors py-2 touch-manipulation"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}

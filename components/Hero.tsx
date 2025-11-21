@@ -65,19 +65,19 @@ export default function Hero() {
           >
             <motion.a
               href="#projects"
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-semibold text-white shadow-lg hover:shadow-xl transition-all"
+              className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-yellow-600 to-orange-600 rounded-lg font-semibold text-white text-sm sm:text-base shadow-lg hover:shadow-xl transition-all"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
               View My Work
             </motion.a>
             <motion.a
-              href="#contact"
-              className="px-8 py-4 glass rounded-lg font-semibold text-white hover:bg-white/10 transition-all"
+              href="#experience"
+              className="px-6 sm:px-8 py-3 sm:py-4 glass rounded-lg font-semibold text-white text-sm sm:text-base hover:bg-white/10 transition-all"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              Get In Touch
+              View Experience
             </motion.a>
           </motion.div>
 

@@ -7,7 +7,7 @@ const navigation = [
   { name: 'Home', href: '#home' },
   { name: 'Technologies', href: '#technologies' },
   { name: 'Projects', href: '#projects' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Experience', href: '#experience' },
 ];
 
 const footerProjects = [
