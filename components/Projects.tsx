@@ -16,6 +16,15 @@ const projects = [
     live: 'https://flickfeed.app',
   },
   {
+    title: 'Alen\'s General Construction',
+    description: 'A professional website for Alen\'s General Construction, showcasing construction services and projects. Features a modern design with responsive layouts and smooth user experience.',
+    tech: ['React', 'TailwindCSS', 'Next.js'],
+    image: 'bg-gradient-to-br from-blue-600 to-indigo-700',
+    logo: '/assets/agclogo.png',
+    github: null,
+    live: 'https://alensgeneralconstruction.com',
+  },
+  {
     title: 'Amer Dashboard',
     description: 'A comprehensive dashboard containing tools and projects I\'ve made. A centralized hub showcasing various applications and utilities built for different purposes.',
     tech: ['React', 'TailwindCSS', 'TypeScript', 'JavaScript', 'Next.js', 'Firebase'],
