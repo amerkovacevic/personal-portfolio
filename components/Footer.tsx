@@ -13,7 +13,7 @@ const navigation = [
 const footerProjects = [
   { name: 'FlickFeed', href: '#projects' },
   { name: 'Alen\'s General Construction', href: '#projects' },
-  { name: 'Amer Dashboard', href: '#projects' },
+  { name: 'amer.lol', href: '#projects' },
 ];
 
 const socialLinks = [

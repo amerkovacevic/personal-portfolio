@@ -25,13 +25,13 @@ const projects = [
     live: 'https://alensgeneralconstruction.com',
   },
   {
-    title: 'Amer Dashboard',
-    description: 'A comprehensive dashboard containing tools and projects I\'ve made. A centralized hub showcasing various applications and utilities built for different purposes.',
+    title: 'amer.lol',
+    description: 'amer.lol is a playground for creative web experiences, mini-apps, and experiments. Built with modern web technologies, it serves as a hub for interactive projects and tools that showcase what\'s possible on the web. The platform is designed to be fast, accessible, and enjoyable to use. Each mini-app is carefully crafted with attention to detail, focusing on both functionality and user experience.',
     tech: ['React', 'TailwindCSS', 'TypeScript', 'JavaScript', 'Next.js', 'Firebase'],
     image: 'bg-gradient-to-br from-green-500 to-teal-600',
     logo: '/assets/aklogo.png',
     github: 'https://github.com/amerkovacevic?tab=repositories',
-    live: 'https://dashboard.amerkovacevic.com',
+    live: 'https://amer.lol',
   },
 ];
 
