@@ -61,92 +61,67 @@ export default function Experience() {
   };
 
   return (
-    <section id="experience" className="py-32 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-orange-900/5 to-transparent" />
+    <section id="experience" className="py-28 relative overflow-hidden">
+      <div className="absolute inset-0 bg-white/5" />
       
       <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
-          className="text-center mb-16"
+          className="flex items-end justify-between mb-12 gap-6"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="gradient-text">Work Experience</span>
-          </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            My professional journey and contributions to the tech industry
+          <div>
+            <p className="text-xs uppercase tracking-[0.35em] text-white/60 mb-3">Background</p>
+            <h2 className="text-3xl md:text-4xl font-display text-white">
+              Experience
+            </h2>
+          </div>
+          <p className="text-sm text-white/60 max-w-sm">
+            The day‑job backbone behind how I build dependable, thoughtful products.
           </p>
         </motion.div>
 
         <motion.div
-          className="max-w-4xl mx-auto"
+          className="grid lg:grid-cols-2 gap-8"
           variants={containerVariants}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
         >
-          <div className="relative pl-8 md:pl-0">
-            {/* Timeline line */}
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-yellow-500 via-orange-500 to-yellow-500 opacity-20" />
-
-            {experiences.map((experience, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                className="relative mb-12"
-              >
-                <div className="flex flex-col md:flex-row items-start gap-6">
-                  {/* Timeline dot */}
-                  <div className="absolute left-2 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-full border-4 border-gray-900 z-10" />
-                  
-                  {/* Content card */}
-                  <motion.div
-                    className={`glass rounded-2xl p-4 sm:p-6 md:p-8 flex-1 w-full ml-0 ${
-                      index % 2 === 0 ? 'md:mr-auto md:pr-16' : 'md:ml-auto md:pl-16'
-                    }`}
-                    whileHover={{ y: -5, scale: 1.02 }}
-                    transition={{ type: 'spring', stiffness: 300 }}
-                  >
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 gap-2">
-                      <div>
-                        <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
-                          {experience.title}
-                        </h3>
-                        <div className="flex flex-wrap items-center gap-2 text-yellow-400 font-semibold mb-2">
-                          <Briefcase size={18} />
-                          <span className="text-sm sm:text-base">{experience.company}</span>
-                          <span className="text-gray-400">•</span>
-                          <span className="text-gray-400 text-sm sm:text-base">{experience.type}</span>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-2 text-gray-400">
-                        <Calendar size={18} />
-                        <span className="text-xs sm:text-sm">{experience.period}</span>
-                      </div>
-                    </div>
-
-                    <ul className="space-y-2 sm:space-y-3 mt-4">
-                      {experience.responsibilities.map((responsibility, idx) => (
-                        <motion.li
-                          key={idx}
-                          className="flex items-start gap-2 sm:gap-3 text-gray-300 text-sm sm:text-base"
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={inView ? { opacity: 1, x: 0 } : {}}
-                          transition={{ delay: 0.3 + index * 0.2 + idx * 0.1 }}
-                        >
-                          <span className="text-yellow-500 mt-1.5 flex-shrink-0">▸</span>
-                          <span className="flex-1">{responsibility}</span>
-                        </motion.li>
-                      ))}
-                    </ul>
-                  </motion.div>
+          {experiences.map((experience, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              className="card p-6 sm:p-8 border border-white/10"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-xs uppercase tracking-[0.3em] text-white/60">
+                  {experience.type}
+                </span>
+                <div className="flex items-center gap-2 text-white/50 text-xs">
+                  <Calendar size={16} />
+                  {experience.period}
                 </div>
-              </motion.div>
-            ))}
-          </div>
+              </div>
+              <h3 className="text-xl sm:text-2xl font-display text-white mb-2">
+                {experience.title}
+              </h3>
+              <div className="flex items-center gap-2 text-white/70 mb-5 text-sm">
+                <Briefcase size={16} className="text-[#b6ff4d]" />
+                {experience.company}
+              </div>
+              <ul className="space-y-3 text-sm text-white/70">
+                {experience.responsibilities.map((responsibility, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <span className="mt-1 h-2 w-2 rounded-full bg-white/40" />
+                    <span>{responsibility}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>
   );
 }
-

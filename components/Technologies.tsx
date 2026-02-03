@@ -57,132 +57,89 @@ export default function Technologies() {
   };
 
   return (
-    <section id="technologies" className="py-32 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/5 to-transparent" />
+    <section id="technologies" className="py-28 relative overflow-hidden">
+      <div className="absolute inset-0 bg-white/5" />
       
       <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
-          className="text-center mb-16"
+          className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-10 gap-4"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="gradient-text">Current Technologies</span>
-          </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Technologies and tools I work with to build exceptional products
-          </p>
+          <div>
+            <h2 className="text-3xl md:text-4xl font-display text-white">Toolbox</h2>
+            <p className="text-sm text-white/60 mt-2">A split between infrastructure craft and product build tools.</p>
+          </div>
+          <span className="text-xs uppercase tracking-[0.3em] text-white/60">What I build with</span>
         </motion.div>
 
-        {/* Daily Core Stack */}
-        <motion.div
-          className="mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.2, duration: 0.6 }}
-        >
-          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center">
-            <span className="text-white">Daily Core Stack</span>
-          </h3>
+        <div className="grid lg:grid-cols-2 gap-10">
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 max-w-6xl mx-auto"
-            variants={containerVariants}
-            initial="hidden"
-            animate={inView ? 'visible' : 'hidden'}
+            className="card p-6 sm:p-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.2, duration: 0.6 }}
           >
-            {dailyCoreStack.map((tech) => (
-              <motion.div
-                key={tech.name}
-                variants={itemVariants}
-                className="group relative"
-              >
+            <h3 className="text-lg md:text-xl font-display text-white mb-6">Everyday Core Stack</h3>
+            <motion.div
+              className="grid grid-cols-2 sm:grid-cols-3 gap-4"
+              variants={containerVariants}
+              initial="hidden"
+              animate={inView ? 'visible' : 'hidden'}
+            >
+              {dailyCoreStack.map((tech) => (
                 <motion.div
-                  className="glass rounded-xl p-4 text-center cursor-pointer h-full flex flex-col items-center justify-center"
-                  whileHover={{ scale: 1.1, y: -5 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
+                  key={tech.name}
+                  variants={itemVariants}
+                  className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-3 py-3"
                 >
-                  <motion.div
-                    className="w-12 h-12 mb-2 relative"
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    <img
-                      src={tech.image}
-                      alt={tech.name}
-                      width={48}
-                      height={48}
-                      className="object-contain w-full h-full"
-                    />
-                  </motion.div>
-                  <h3 className="text-sm font-semibold text-white">{tech.name}</h3>
-                  
-                  {/* Hover effect overlay */}
-                  <motion.div
-                    className={`absolute inset-0 rounded-xl bg-gradient-to-br ${tech.color} opacity-0 group-hover:opacity-10 transition-opacity`}
+                  <img
+                    src={tech.image}
+                    alt={tech.name}
+                    width={28}
+                    height={28}
+                    className="object-contain"
                   />
+                  <span className="text-sm text-white/80">{tech.name}</span>
                 </motion.div>
-              </motion.div>
-            ))}
+              ))}
+            </motion.div>
           </motion.div>
-        </motion.div>
 
-        {/* Side Project Development */}
-        <motion.div
-          className="mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.4, duration: 0.6 }}
-        >
-          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center">
-            <span className="text-white">Side Project Development</span>
-          </h3>
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-6xl mx-auto"
-            variants={containerVariants}
-            initial="hidden"
-            animate={inView ? 'visible' : 'hidden'}
+            className="card p-6 sm:p-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.4, duration: 0.6 }}
           >
-            {sideProjectStack.map((tech) => (
-              <motion.div
-                key={tech.name}
-                variants={itemVariants}
-                className="group relative"
-              >
+            <h3 className="text-lg md:text-xl font-display text-white mb-6">Creative Build Stack</h3>
+            <motion.div
+              className="grid grid-cols-2 sm:grid-cols-3 gap-4"
+              variants={containerVariants}
+              initial="hidden"
+              animate={inView ? 'visible' : 'hidden'}
+            >
+              {sideProjectStack.map((tech) => (
                 <motion.div
-                  className="glass rounded-xl p-4 text-center cursor-pointer h-full flex flex-col items-center justify-center"
-                  whileHover={{ scale: 1.1, y: -5 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
+                  key={tech.name}
+                  variants={itemVariants}
+                  className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-3 py-3"
                 >
-                  <motion.div
-                    className="w-12 h-12 mb-2 relative"
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    <img
-                      src={tech.image}
-                      alt={tech.name}
-                      width={48}
-                      height={48}
-                      className="object-contain w-full h-full"
-                    />
-                  </motion.div>
-                  <h3 className="text-sm font-semibold text-white">{tech.name}</h3>
-                  
-                  {/* Hover effect overlay */}
-                  <motion.div
-                    className={`absolute inset-0 rounded-xl bg-gradient-to-br ${tech.color} opacity-0 group-hover:opacity-10 transition-opacity`}
+                  <img
+                    src={tech.image}
+                    alt={tech.name}
+                    width={28}
+                    height={28}
+                    className="object-contain"
                   />
+                  <span className="text-sm text-white/80">{tech.name}</span>
                 </motion.div>
-              </motion.div>
-            ))}
+              ))}
+            </motion.div>
           </motion.div>
-        </motion.div>
-
+        </div>
       </div>
     </section>
   );
 }
-

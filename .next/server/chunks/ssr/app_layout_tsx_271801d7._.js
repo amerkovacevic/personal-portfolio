@@ -1,0 +1,3 @@
+module.exports=[33290,a=>{"use strict";var b=a.i(7997);function c({children:a}){return(0,b.jsx)("html",{lang:"en",children:(0,b.jsx)("body",{children:a})})}a.s(["default",()=>c,"metadata",0,{title:"Amer Kovacevic - Platform Engineer II Portfolio",description:"Portfolio of a Platform Engineer II showcasing projects, technologies, and expertise",icons:{icon:"/assets/aklogo.png",shortcut:"/assets/aklogo.png",apple:"/assets/aklogo.png"}},"viewport",0,{width:"device-width",initialScale:1,maximumScale:5}])}];
+
+//# sourceMappingURL=app_layout_tsx_271801d7._.js.map

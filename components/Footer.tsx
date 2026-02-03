@@ -12,6 +12,7 @@ const navigation = [
 
 const footerProjects = [
   { name: 'FlickFeed', href: '#projects' },
+  { name: 'Brickfolio', href: '#projects' },
   { name: 'Alen\'s General Construction', href: '#projects' },
   { name: 'amer.lol', href: '#projects' },
 ];
@@ -27,13 +28,13 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative border-t border-white/10 bg-black/50 backdrop-blur-sm">
+    <footer className="relative border-t border-white/10 bg-[#0a0a0a]/90 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2">
             <motion.h3
-              className="text-2xl font-bold gradient-text mb-4"
+              className="text-2xl font-display text-white mb-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -42,13 +43,13 @@ export default function Footer() {
               Amer Kovacevic
             </motion.h3>
             <motion.p
-              className="text-gray-400 mb-6 max-w-md"
+              className="text-white/70 mb-6 max-w-md text-sm sm:text-base"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              Platform Engineer II who designs and maintains robust infrastructure, automates deployments, and ensures platform reliability. In my free time I like to develop apps, websites, and more.
+              Independent projects, modern interfaces, and product experiments. I build with precision and ship with care.
             </motion.p>
             <motion.div
               className="flex gap-4"
@@ -65,7 +66,7 @@ export default function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 glass rounded-full hover:bg-white/10 transition-all"
+                    className="p-3 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 transition-all"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     whileTap={{ scale: 0.9 }}
                     initial={{ opacity: 0, scale: 0 }}
@@ -83,7 +84,7 @@ export default function Footer() {
           {/* Navigation Section */}
           <div>
             <motion.h4
-              className="text-lg font-semibold text-white mb-4"
+              className="text-lg font-display text-white mb-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -102,7 +103,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <motion.a
                     href={item.href}
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-white/60 hover:text-white transition-colors"
                     whileHover={{ x: 5 }}
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -119,7 +120,7 @@ export default function Footer() {
           {/* Projects Section */}
           <div>
             <motion.h4
-              className="text-lg font-semibold text-white mb-4"
+              className="text-lg font-display text-white mb-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -138,7 +139,7 @@ export default function Footer() {
                 <li key={project.name}>
                   <motion.a
                     href={project.href}
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-white/60 hover:text-white transition-colors"
                     whileHover={{ x: 5 }}
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -156,7 +157,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
           <motion.p
-            className="text-gray-400 text-sm mb-4 md:mb-0"
+            className="text-white/60 text-sm mb-4 md:mb-0"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -166,7 +167,7 @@ export default function Footer() {
           </motion.p>
           <motion.button
             onClick={scrollToTop}
-            className="p-3 glass rounded-full hover:bg-white/10 transition-all group"
+            className="p-3 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 transition-all group"
             whileHover={{ scale: 1.1, y: -5 }}
             whileTap={{ scale: 0.9 }}
             initial={{ opacity: 0, scale: 0 }}
@@ -184,4 +185,3 @@ export default function Footer() {
     </footer>
   );
 }
-
